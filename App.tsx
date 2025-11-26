@@ -1,2 +1,2 @@
-import App from './app/index';
+import App from './app/screens/index';
 export default App;

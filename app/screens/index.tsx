@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createContext } from 'react';
 import CameraComponent from './cameraComponent';
+import MoviesScreen from './MoviesScreen';
 import StoredReceipts from './Storedreceipts';
-
 const receiptContext = createContext(undefined);
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +29,16 @@ export default function App() {
   options={{
     tabBarIcon: ({ color, size }) => (
       <MaterialIcons name="camera-alt" size={size} color={color} />
+    ),
+    headerShown: false,
+  }}
+/>
+<Tab.Screen 
+  name="Movie Screen" 
+  component={MoviesScreen}
+  options={{
+    tabBarIcon: ({ color, size }) => (
+      <MaterialIcons name="movie" size={size} color={color} />
     ),
     headerShown: false,
   }}
